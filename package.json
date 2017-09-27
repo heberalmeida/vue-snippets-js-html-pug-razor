@@ -1,0 +1,54 @@
+{
+    "name": "vue-snippets-js-html-pug-razor",
+    "displayName": "Vue Snippets JS/HTML/PUG/Razor",
+    "description": "",
+    "icon": "images/vue-logo.png",
+    "version": "0.0.1",
+    "publisher": "heberalmeida",
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/heberalmeida/vue-snippets-js-html-pug-razor"
+    },
+    "keywords": [
+        "Vue",
+        "Vue 2",
+        "Vue Snippets"
+    ],
+    "extensionDependencies": [
+        "octref.vetur"
+    ],
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "vue",
+                "path": "./snippets/vue.json"
+            },
+            {
+                "language": "plaintext",
+                "path": "./snippets/plaintext.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/vue.json"
+            },
+            {
+                "language": "pug",
+                "path": "./snippets/pug.json"
+            },
+            {
+                "language": "razor",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            }
+        ]
+    }
+}
