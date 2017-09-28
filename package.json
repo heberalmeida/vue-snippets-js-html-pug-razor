@@ -1,6 +1,6 @@
 {
-    "name": "vue-snippets-js-html-pug-razor",
-    "displayName": "Vue Snippets JS/HTML/PUG/Razor",
+    "name": "vue-snippets-js-html-pug-razor-php",
+    "displayName": "Vue Snippets JS/HTML/PUG/Razor/PHP",
     "description": "",
     "icon": "images/vue-logo.png",
     "version": "0.0.1",
@@ -43,6 +43,10 @@
             },
             {
                 "language": "razor",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "php",
                 "path": "./snippets/html.json"
             },
             {
