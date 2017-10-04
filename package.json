@@ -3,7 +3,7 @@
     "displayName": "Vue Snippets JS/HTML/PUG/Razor/PHP",
     "description": "",
     "icon": "images/vue-logo.png",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publisher": "heberalmeida",
     "engines": {
         "vscode": "^1.14.0"
@@ -52,6 +52,18 @@
             {
                 "language": "html",
                 "path": "./snippets/html.json"
+            },
+            {
+                "language": "vue",
+                "path": "./snippets/bs3.json"
+            },
+            {
+                "language": "razor",
+                "path": "./snippets/bs3.json"
+            },
+            {
+                "language": "php",
+                "path": "./snippets/bs3.json"
             }
         ]
     }
