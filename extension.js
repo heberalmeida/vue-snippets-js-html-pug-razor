@@ -1,12 +1,40 @@
-let vscode = require('vscode');
+/**
+ * Vue 3 + Tailwind + Bootstrap Snippets Extension
+ * 
+ * This extension provides comprehensive snippets for:
+ * - Vue 3 with Composition API and TypeScript
+ * - Tailwind CSS 3 & 4
+ * - Bootstrap 5 & 6
+ * - Modern HTML5, Pug, and Razor
+ */
+
+const vscode = require('vscode');
+
+/**
+ * Extension activation
+ * @param {vscode.ExtensionContext} context
+ */
 function activate(context) {
-    console.log('Congratulations, your extension "vue-vscode-snippets" is now active!');
-    let disposable = vscode.commands.registerCommand('extension.sayHello', function () {
-        vscode.window.showInformationMessage('Hello World!');
-    });
-    context.subscriptions.push(disposable);
+	console.log('Vue 3 + Tailwind + Bootstrap Snippets extension is now active!');
+	
+	// Register any commands here if needed in the future
+	const disposable = vscode.commands.registerCommand('vue-snippets.showInfo', () => {
+		vscode.window.showInformationMessage(
+			'Vue 3 + Tailwind + Bootstrap Snippets is active! Type snippet prefixes to use them.'
+		);
+	});
+	
+	context.subscriptions.push(disposable);
 }
-exports.activate = activate;
+
+/**
+ * Extension deactivation
+ */
 function deactivate() {
+	console.log('Vue 3 + Tailwind + Bootstrap Snippets extension is deactivated.');
 }
-exports.deactivate = deactivate;
+
+module.exports = {
+	activate,
+	deactivate
+};

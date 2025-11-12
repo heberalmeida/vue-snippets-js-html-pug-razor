@@ -1,0 +1,263 @@
+{
+	"Tailwind Button": {
+		"prefix": "twbtn",
+		"body": [
+			"<button class=\"px-4 py-2 bg-${1:blue}-500 text-white rounded-lg hover:bg-${1:blue}-600 transition-colors\">",
+			"\t${2:Button Text}",
+			"</button>"
+		],
+		"description": "Tailwind CSS button with hover effect"
+	},
+	"Tailwind Button Primary": {
+		"prefix": "twbtn-primary",
+		"body": [
+			"<button class=\"px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors\">",
+			"\t${1:Button Text}",
+			"</button>"
+		],
+		"description": "Tailwind CSS primary button"
+	},
+	"Tailwind Button Secondary": {
+		"prefix": "twbtn-secondary",
+		"body": [
+			"<button class=\"px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors\">",
+			"\t${1:Button Text}",
+			"</button>"
+		],
+		"description": "Tailwind CSS secondary button"
+	},
+	"Tailwind Card": {
+		"prefix": "twcard",
+		"body": [
+			"<div class=\"bg-white rounded-lg shadow-md p-6\">",
+			"\t<h3 class=\"text-xl font-bold mb-4\">${1:Card Title}</h3>",
+			"\t<p class=\"text-gray-600\">${2:Card content}</p>",
+			"</div>"
+		],
+		"description": "Tailwind CSS card component"
+	},
+	"Tailwind Flex Container": {
+		"prefix": "twflex",
+		"body": [
+			"<div class=\"flex ${1:flex-row} ${2:items-center} ${3:justify-between} gap-4\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Tailwind CSS flex container"
+	},
+	"Tailwind Flex Column": {
+		"prefix": "twflex-col",
+		"body": [
+			"<div class=\"flex flex-col ${1:items-center} ${2:justify-center} gap-4\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Tailwind CSS flex column"
+	},
+	"Tailwind Grid": {
+		"prefix": "twgrid",
+		"body": [
+			"<div class=\"grid grid-cols-${1:3} gap-${2:4}\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Tailwind CSS grid"
+	},
+	"Tailwind Responsive Grid": {
+		"prefix": "twgrid-responsive",
+		"body": [
+			"<div class=\"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${1:4} gap-${2:4}\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Tailwind CSS responsive grid"
+	},
+	"Tailwind Dark Mode": {
+		"prefix": "twdark",
+		"body": [
+			"<div class=\"bg-white dark:bg-gray-800 text-gray-900 dark:text-white\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Tailwind CSS dark mode support"
+	},
+	"Tailwind Container": {
+		"prefix": "twcontainer",
+		"body": [
+			"<div class=\"container mx-auto px-4\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Tailwind CSS container"
+	},
+	"Tailwind Responsive Text": {
+		"prefix": "twtext-responsive",
+		"body": [
+			"<h1 class=\"text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold\">${1:Heading}</h1>"
+		],
+		"description": "Tailwind CSS responsive text sizing"
+	},
+	"Tailwind Input": {
+		"prefix": "twinput",
+		"body": [
+			"<input type=\"${1:text}\" class=\"w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-${2:blue}-500 focus:border-transparent\" placeholder=\"${3:Placeholder}\" />"
+		],
+		"description": "Tailwind CSS input field"
+	},
+	"Tailwind Form": {
+		"prefix": "twform",
+		"body": [
+			"<form class=\"space-y-4\">",
+			"\t<div>",
+			"\t\t<label class=\"block text-sm font-medium text-gray-700 mb-1\">${1:Label}</label>",
+			"\t\t<input type=\"${2:text}\" class=\"w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500\" />",
+			"\t</div>",
+			"\t<button type=\"submit\" class=\"px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600\">${3:Submit}</button>",
+			"</form>"
+		],
+		"description": "Tailwind CSS form"
+	},
+	"Tailwind Navbar": {
+		"prefix": "twnavbar",
+		"body": [
+			"<nav class=\"bg-white shadow-md\">",
+			"\t<div class=\"container mx-auto px-4\">",
+			"\t\t<div class=\"flex items-center justify-between h-16\">",
+			"\t\t\t<div class=\"flex items-center\">",
+			"\t\t\t\t<a href=\"#\" class=\"text-xl font-bold\">${1:Logo}</a>",
+			"\t\t\t</div>",
+			"\t\t\t<div class=\"flex space-x-4\">",
+			"\t\t\t\t<a href=\"#\" class=\"text-gray-700 hover:text-blue-500\">${2:Link 1}</a>",
+			"\t\t\t\t<a href=\"#\" class=\"text-gray-700 hover:text-blue-500\">${3:Link 2}</a>",
+			"\t\t\t</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</nav>"
+		],
+		"description": "Tailwind CSS navbar"
+	},
+	"Tailwind Modal": {
+		"prefix": "twmodal",
+		"body": [
+			"<div class=\"fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50\">",
+			"\t<div class=\"bg-white rounded-lg p-6 max-w-md w-full mx-4\">",
+			"\t\t<h2 class=\"text-2xl font-bold mb-4\">${1:Modal Title}</h2>",
+			"\t\t<p class=\"text-gray-600 mb-4\">${2:Modal content}</p>",
+			"\t\t<div class=\"flex justify-end space-x-2\">",
+			"\t\t\t<button class=\"px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300\">${3:Cancel}</button>",
+			"\t\t\t<button class=\"px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600\">${4:Confirm}</button>",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Tailwind CSS modal"
+	},
+	"Tailwind Badge": {
+		"prefix": "twbadge",
+		"body": [
+			"<span class=\"px-2 py-1 text-xs font-semibold rounded-full bg-${1:blue}-100 text-${1:blue}-800\">${2:Badge}</span>"
+		],
+		"description": "Tailwind CSS badge"
+	},
+	"Tailwind Alert": {
+		"prefix": "twalert",
+		"body": [
+			"<div class=\"bg-${1:blue}-100 border border-${1:blue}-400 text-${1:blue}-700 px-4 py-3 rounded relative\" role=\"alert\">",
+			"\t<span class=\"block sm:inline\">${2:Alert message}</span>",
+			"</div>"
+		],
+		"description": "Tailwind CSS alert"
+	},
+	"Tailwind Spinner": {
+		"prefix": "twspinner",
+		"body": [
+			"<div class=\"inline-block animate-spin rounded-full h-${1:8} w-${1:8} border-b-2 border-${2:blue}-500\"></div>"
+		],
+		"description": "Tailwind CSS loading spinner"
+	},
+	"Tailwind Responsive Breakpoint (sm:)": {
+		"prefix": "twsm",
+		"body": [
+			"sm:${1:class}"
+		],
+		"description": "Tailwind CSS small breakpoint (640px+)"
+	},
+	"Tailwind Responsive Breakpoint (md:)": {
+		"prefix": "twmd",
+		"body": [
+			"md:${1:class}"
+		],
+		"description": "Tailwind CSS medium breakpoint (768px+)"
+	},
+	"Tailwind Responsive Breakpoint (lg:)": {
+		"prefix": "twlg",
+		"body": [
+			"lg:${1:class}"
+		],
+		"description": "Tailwind CSS large breakpoint (1024px+)"
+	},
+	"Tailwind Responsive Breakpoint (xl:)": {
+		"prefix": "twxl",
+		"body": [
+			"xl:${1:class}"
+		],
+		"description": "Tailwind CSS extra large breakpoint (1280px+)"
+	},
+	"Tailwind Responsive Breakpoint (2xl:)": {
+		"prefix": "tw2xl",
+		"body": [
+			"2xl:${1:class}"
+		],
+		"description": "Tailwind CSS 2xl breakpoint (1536px+)"
+	},
+	"Tailwind Dark Mode Class": {
+		"prefix": "twdark-class",
+		"body": [
+			"dark:${1:class}"
+		],
+		"description": "Tailwind CSS dark mode variant"
+	},
+	"Tailwind Hover": {
+		"prefix": "twhover",
+		"body": [
+			"hover:${1:class}"
+		],
+		"description": "Tailwind CSS hover variant"
+	},
+	"Tailwind Focus": {
+		"prefix": "twfocus",
+		"body": [
+			"focus:${1:class}"
+		],
+		"description": "Tailwind CSS focus variant"
+	},
+	"Tailwind Active": {
+		"prefix": "twactive",
+		"body": [
+			"active:${1:class}"
+		],
+		"description": "Tailwind CSS active variant"
+	},
+	"Tailwind Transition": {
+		"prefix": "twtransition",
+		"body": [
+			"transition-${1:all} duration-${2:300} ease-${3:in-out}"
+		],
+		"description": "Tailwind CSS transition"
+	},
+	"Tailwind Shadow": {
+		"prefix": "twshadow",
+		"body": [
+			"shadow-${1:md}"
+		],
+		"description": "Tailwind CSS shadow"
+	},
+	"Tailwind Rounded": {
+		"prefix": "twrounded",
+		"body": [
+			"rounded-${1:lg}"
+		],
+		"description": "Tailwind CSS rounded corners"
+	}
+}
+

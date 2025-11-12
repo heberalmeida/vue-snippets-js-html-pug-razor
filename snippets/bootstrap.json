@@ -1,0 +1,356 @@
+{
+	"Bootstrap 5/6 Grid Container": {
+		"prefix": "bsgrid",
+		"body": [
+			"<div class=\"container\">",
+			"\t<div class=\"row\">",
+			"\t\t<div class=\"col-${1:12} col-md-${2:6} col-lg-${3:4}\">",
+			"\t\t\t${0}",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 grid container with responsive columns"
+	},
+	"Bootstrap 5/6 Button": {
+		"prefix": "bsbtn",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-${1:primary}\">${2:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 button"
+	},
+	"Bootstrap 5/6 Button Primary": {
+		"prefix": "bsbtn-primary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-primary\">${1:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 primary button"
+	},
+	"Bootstrap 5/6 Button Secondary": {
+		"prefix": "bsbtn-secondary",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-secondary\">${1:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 secondary button"
+	},
+	"Bootstrap 5/6 Button Success": {
+		"prefix": "bsbtn-success",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-success\">${1:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 success button"
+	},
+	"Bootstrap 5/6 Button Danger": {
+		"prefix": "bsbtn-danger",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-danger\">${1:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 danger button"
+	},
+	"Bootstrap 5/6 Button Warning": {
+		"prefix": "bsbtn-warning",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-warning\">${1:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 warning button"
+	},
+	"Bootstrap 5/6 Button Info": {
+		"prefix": "bsbtn-info",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-info\">${1:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 info button"
+	},
+	"Bootstrap 5/6 Button Outline": {
+		"prefix": "bsbtn-outline",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-outline-${1:primary}\">${2:Button Text}</button>"
+		],
+		"description": "Bootstrap 5/6 outline button"
+	},
+	"Bootstrap 5/6 Form": {
+		"prefix": "bsform",
+		"body": [
+			"<form>",
+			"\t<div class=\"mb-3\">",
+			"\t\t<label for=\"${1:inputId}\" class=\"form-label\">${2:Label}</label>",
+			"\t\t<input type=\"${3:text}\" class=\"form-control\" id=\"${1:inputId}\" placeholder=\"${4:Placeholder}\">",
+			"\t</div>",
+			"\t<button type=\"submit\" class=\"btn btn-primary\">${5:Submit}</button>",
+			"</form>"
+		],
+		"description": "Bootstrap 5/6 form"
+	},
+	"Bootstrap 5/6 Form Input": {
+		"prefix": "bsinput",
+		"body": [
+			"<div class=\"mb-3\">",
+			"\t<label for=\"${1:inputId}\" class=\"form-label\">${2:Label}</label>",
+			"\t<input type=\"${3:text}\" class=\"form-control\" id=\"${1:inputId}\" placeholder=\"${4:Placeholder}\">",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 form input"
+	},
+	"Bootstrap 5/6 Form Select": {
+		"prefix": "bsselect",
+		"body": [
+			"<div class=\"mb-3\">",
+			"\t<label for=\"${1:selectId}\" class=\"form-label\">${2:Label}</label>",
+			"\t<select class=\"form-select\" id=\"${1:selectId}\">",
+			"\t\t<option selected>${3:Choose...</option>",
+			"\t\t<option value=\"1\">${4:Option 1}</option>",
+			"\t</select>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 form select"
+	},
+	"Bootstrap 5/6 Form Checkbox": {
+		"prefix": "bscheckbox",
+		"body": [
+			"<div class=\"form-check\">",
+			"\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:checkboxId}\">",
+			"\t<label class=\"form-check-label\" for=\"${1:checkboxId}\">",
+			"\t\t${2:Checkbox label}",
+			"\t</label>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 form checkbox"
+	},
+	"Bootstrap 5/6 Form Radio": {
+		"prefix": "bsradio",
+		"body": [
+			"<div class=\"form-check\">",
+			"\t<input class=\"form-check-input\" type=\"radio\" name=\"${1:radioGroup}\" id=\"${2:radioId}\">",
+			"\t<label class=\"form-check-label\" for=\"${2:radioId}\">",
+			"\t\t${3:Radio label}",
+			"\t</label>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 form radio"
+	},
+	"Bootstrap 5/6 Navbar": {
+		"prefix": "bsnavbar",
+		"body": [
+			"<nav class=\"navbar navbar-expand-lg navbar-${1:light} bg-${2:light}\">",
+			"\t<div class=\"container-fluid\">",
+			"\t\t<a class=\"navbar-brand\" href=\"#\">${3:Navbar}</a>",
+			"\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\">",
+			"\t\t\t<span class=\"navbar-toggler-icon\"></span>",
+			"\t\t</button>",
+			"\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNav\">",
+			"\t\t\t<ul class=\"navbar-nav\">",
+			"\t\t\t\t<li class=\"nav-item\">",
+			"\t\t\t\t\t<a class=\"nav-link active\" href=\"#\">${4:Home}</a>",
+			"\t\t\t\t</li>",
+			"\t\t\t\t<li class=\"nav-item\">",
+			"\t\t\t\t\t<a class=\"nav-link\" href=\"#\">${5:Link}</a>",
+			"\t\t\t\t</li>",
+			"\t\t\t</ul>",
+			"\t\t</div>",
+			"\t</div>",
+			"</nav>"
+		],
+		"description": "Bootstrap 5/6 navbar"
+	},
+	"Bootstrap 5/6 Modal": {
+		"prefix": "bsmodal",
+		"body": [
+			"<div class=\"modal fade\" id=\"${1:modalId}\" tabindex=\"-1\">",
+			"\t<div class=\"modal-dialog\">",
+			"\t\t<div class=\"modal-content\">",
+			"\t\t\t<div class=\"modal-header\">",
+			"\t\t\t\t<h5 class=\"modal-title\">${2:Modal title}</h5>",
+			"\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\"></button>",
+			"\t\t\t</div>",
+			"\t\t\t<div class=\"modal-body\">",
+			"\t\t\t\t${0}",
+			"\t\t\t</div>",
+			"\t\t\t<div class=\"modal-footer\">",
+			"\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">${3:Close}</button>",
+			"\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">${4:Save changes}</button>",
+			"\t\t\t</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 modal"
+	},
+	"Bootstrap 5/6 Card": {
+		"prefix": "bscard",
+		"body": [
+			"<div class=\"card\">",
+			"\t<div class=\"card-header\">",
+			"\t\t${1:Card header}",
+			"\t</div>",
+			"\t<div class=\"card-body\">",
+			"\t\t<h5 class=\"card-title\">${2:Card title}</h5>",
+			"\t\t<p class=\"card-text\">${3:Card content}</p>",
+			"\t\t<a href=\"#\" class=\"btn btn-primary\">${4:Go somewhere}</a>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 card"
+	},
+	"Bootstrap 5/6 Alert": {
+		"prefix": "bsalert",
+		"body": [
+			"<div class=\"alert alert-${1:primary} alert-dismissible fade show\" role=\"alert\">",
+			"\t${2:Alert message}",
+			"\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 alert"
+	},
+	"Bootstrap 5/6 Badge": {
+		"prefix": "bsbadge",
+		"body": [
+			"<span class=\"badge bg-${1:primary}\">${2:Badge}</span>"
+		],
+		"description": "Bootstrap 5/6 badge"
+	},
+	"Bootstrap 5/6 Spinner": {
+		"prefix": "bsspinner",
+		"body": [
+			"<div class=\"spinner-border text-${1:primary}\" role=\"status\">",
+			"\t<span class=\"visually-hidden\">${2:Loading...</span>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 spinner"
+	},
+	"Bootstrap 5/6 Progress Bar": {
+		"prefix": "bsprogress",
+		"body": [
+			"<div class=\"progress\">",
+			"\t<div class=\"progress-bar\" role=\"progressbar\" style=\"width: ${1:25}%\" aria-valuenow=\"${1:25}\" aria-valuemin=\"0\" aria-valuemax=\"100\">${1:25}%</div>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 progress bar"
+	},
+	"Bootstrap 5/6 Dropdown": {
+		"prefix": "bsdropdown",
+		"body": [
+			"<div class=\"dropdown\">",
+			"\t<button class=\"btn btn-${1:primary} dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\">",
+			"\t\t${2:Dropdown button}",
+			"\t</button>",
+			"\t<ul class=\"dropdown-menu\">",
+			"\t\t<li><a class=\"dropdown-item\" href=\"#\">${3:Action}</a></li>",
+			"\t\t<li><a class=\"dropdown-item\" href=\"#\">${4:Another action}</a></li>",
+			"\t</ul>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 dropdown"
+	},
+	"Bootstrap 5/6 Table": {
+		"prefix": "bstable",
+		"body": [
+			"<table class=\"table table-${1:striped} table-${2:hover}\">",
+			"\t<thead>",
+			"\t\t<tr>",
+			"\t\t\t<th scope=\"col\">${3:#}</th>",
+			"\t\t\t<th scope=\"col\">${4:First}</th>",
+			"\t\t\t<th scope=\"col\">${5:Last}</th>",
+			"\t\t</tr>",
+			"\t</thead>",
+			"\t<tbody>",
+			"\t\t<tr>",
+			"\t\t\t<th scope=\"row\">1</th>",
+			"\t\t\t<td>${6:Mark}</td>",
+			"\t\t\t<td>${7:Otto}</td>",
+			"\t\t</tr>",
+			"\t</tbody>",
+			"</table>"
+		],
+		"description": "Bootstrap 5/6 table"
+	},
+	"Bootstrap 5/6 Container": {
+		"prefix": "bscontainer",
+		"body": [
+			"<div class=\"container\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 container"
+	},
+	"Bootstrap 5/6 Container Fluid": {
+		"prefix": "bscontainer-fluid",
+		"body": [
+			"<div class=\"container-fluid\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 container fluid"
+	},
+	"Bootstrap 5/6 Row": {
+		"prefix": "bsrow",
+		"body": [
+			"<div class=\"row\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 row"
+	},
+	"Bootstrap 5/6 Column": {
+		"prefix": "bscol",
+		"body": [
+			"<div class=\"col-${1:12} col-md-${2:6} col-lg-${3:4}\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 column"
+	},
+	"Bootstrap 5/6 Accordion": {
+		"prefix": "bsaccordion",
+		"body": [
+			"<div class=\"accordion\" id=\"${1:accordionId}\">",
+			"\t<div class=\"accordion-item\">",
+			"\t\t<h2 class=\"accordion-header\">",
+			"\t\t\t<button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#${2:collapseOne}\">",
+			"\t\t\t\t${3:Accordion Item #1}",
+			"\t\t\t</button>",
+			"\t\t</h2>",
+			"\t\t<div id=\"${2:collapseOne}\" class=\"accordion-collapse collapse show\" data-bs-parent=\"#${1:accordionId}\">",
+			"\t\t\t<div class=\"accordion-body\">",
+			"\t\t\t\t${4:Content}",
+			"\t\t\t</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 accordion"
+	},
+	"Bootstrap 5/6 Toast": {
+		"prefix": "bstoast",
+		"body": [
+			"<div class=\"toast\" role=\"alert\">",
+			"\t<div class=\"toast-header\">",
+			"\t\t<strong class=\"me-auto\">${1:Toast title}</strong>",
+			"\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\"></button>",
+			"\t</div>",
+			"\t<div class=\"toast-body\">",
+			"\t\t${2:Toast message}",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Bootstrap 5/6 toast notification"
+	},
+	"Bootstrap 5/6 Tooltip": {
+		"prefix": "bstooltip",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"tooltip\" data-bs-placement=\"${1:top}\" title=\"${2:Tooltip text}\">",
+			"\t${3:Hover me}",
+			"</button>"
+		],
+		"description": "Bootstrap 5/6 tooltip"
+	},
+	"Bootstrap 5/6 Popover": {
+		"prefix": "bspopover",
+		"body": [
+			"<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"popover\" data-bs-title=\"${1:Popover title}\" data-bs-content=\"${2:Popover content}\">",
+			"\t${3:Click to toggle popover}",
+			"</button>"
+		],
+		"description": "Bootstrap 5/6 popover"
+	}
+}
+

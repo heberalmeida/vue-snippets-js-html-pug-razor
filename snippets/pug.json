@@ -1,188 +1,278 @@
 {
-    "v-text": {
-        "prefix": "vText",
-        "body": [
-            "v-text=\"${1:msg}\""
-        ],
-        "description": "Expects: string"
-    },
-    "v-html": {
-        "prefix": "vHtml",
-        "body": [
-            "v-html=\"${1:html}\""
-        ],
-        "description": "Expects: string"
-    },
-    "v-if": {
-        "prefix": "vIf",
-        "body": [
-            "v-if=\"${1:condition}\""
-        ],
-        "description": "Expects: any"
-    },
-    "v-show": {
-        "prefix": "vShow",
-        "body": [
-            "v-show=\"${1:condition}\""
-        ],
-        "description": "Expects: any"
-    },
-    "v-else": {
-        "prefix": "vElse",
-        "body": [
-            "v-else"
-        ],
-        "description": "Does not expect expression. previous sibling element must have v-if or v-else-if."
-    },
-    "v-else-if": {
-        "prefix": "vElseIf",
-        "body": [
-            "v-else-if=\"${1:condition}\""
-        ],
-        "description": "Expects: any. previous sibling element must have v-if or v-else-if."
-    },
-    "v-for": {
-        "prefix": "vFor",
-        "body": [
-            "v-for=\"${1:item} in ${2:items}\""
-        ],
-        "description": "Expects: Array | Object | number | string"
-    },
-    "v-on": {
-        "prefix": "vOn",
-        "body": [
-            "v-on:${1:event}=\"${2:handle}\""
-        ],
-        "description": "Expects: Function | Inline Statement"
-    },
-    "v-bind": {
-        "prefix": "vBind",
-        "body": [
-            "v-bind$1=\"${2}\""
-        ],
-        "description": "Expects: any (with argument) | Object (without argument)"
-    },
-    "v-model": {
-        "prefix": "vModel",
-        "body": [
-            "v-model=\"${1:something}\""
-        ],
-        "description": "Expects: varies based on value of form inputs element or output of components"
-    },
-    "v-pre": {
-        "prefix": "vPre",
-        "body": [
-            "v-pre"
-        ],
-        "description": "Does not expect expression"
-    },
-    "v-cloak": {
-        "prefix": "vCloak",
-        "body": [
-            "v-cloak"
-        ],
-        "description": "Does not expect expression"
-    },
-    "v-once": {
-        "prefix": "vOnce",
-        "body": [
-            "v-once"
-        ],
-        "description": "Does not expect expression"
-    },
-
-    "key": {
-        "prefix": "key",
-        "body": [
-            ":key=\"${1:key}\""
-        ],
-        "description":"Expects: string. The key special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
-    },
-    "ref": {
-        "prefix": "ref",
-        "body": [
-            "ref=\"${1:reference}\"$0"
-        ],
-        "description": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance."
-    },
-    "slotA": {
-        "prefix": "slotA",
-        "body": [
-            "slot=\"$1\"$0"
-        ],
-        "description": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
-    },
-    "slotE": {
-        "prefix": "slotE",
-        "body": [
-            "slot"
-        ],
-        "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
-    },
-
-    "component": {
-        "prefix": "component",
-        "body": [
-            "component(:is=\"${1:componentId}\") $0"
-
-        ],
-        "description": "component element"
-    },
-    "keep-alive": {
-        "prefix": "keepAlive",
-        "body": [
-            "keep-alive$0"
-        ],
-        "description": "keep-alive element"
-    },
-    "transition": {
-        "prefix": "transition",
-        "body": [
-            "transition$0"
-        ],
-        "description": "transition element"
-    },
-    "transition-group": {
-        "prefix": "transitionGroup",
-        "body": [
-            "transition-group$0"
-        ],
-        "description": "transition-group element"
-    },
-
-    "routerLink": {
-        "prefix": "routerLink",
-        "body": [
-            "router-link $0"
-        ],
-        "description": "router-link element"
-    },
-    "routerLinkTo": {
-        "prefix": "routerLinkTo",
-        "body": [
-            "router-link (to=\"$1\") $0"
-        ],
-        "description": "router-link (to='') . router-link element"
-    },
-    "to": {
-        "prefix": "to",
-        "body": [
-            "to=\"$1\"$0"
-        ],
-        "description": "to=''"
-    },
-    "tag": {
-        "prefix": "tag",
-        "body": [
-            "tag=\"$1\"$0"
-        ],
-        "description": "tag=''"
-    },
-    "routerView": {
-        "prefix": "routerView",
-        "body": [
-            "router-view $0"
-        ],
-        "description": "router-view element"
-    }
+	"Pug HTML5 Document": {
+		"prefix": "pughtml5",
+		"body": [
+			"doctype html",
+			"html(lang=\"${1:en}\")",
+			"\thead",
+			"\t\tmeta(charset=\"UTF-8\")",
+			"\t\tmeta(name=\"viewport\" content=\"width=device-width, initial-scale=1.0\")",
+			"\t\tmeta(name=\"description\" content=\"${2:Page description}\")",
+			"\t\ttitle ${3:Page Title}",
+			"\tbody",
+			"\t\t${0}"
+		],
+		"description": "Pug HTML5 document structure"
+	},
+	"Pug Semantic Header": {
+		"prefix": "pugheader",
+		"body": [
+			"header",
+			"\tnav",
+			"\t\t${0}"
+		],
+		"description": "Pug semantic header with nav"
+	},
+	"Pug Semantic Main": {
+		"prefix": "pugmain",
+		"body": [
+			"main",
+			"\t${0}"
+		],
+		"description": "Pug semantic main content"
+	},
+	"Pug Semantic Footer": {
+		"prefix": "pugfooter",
+		"body": [
+			"footer",
+			"\t${0}"
+		],
+		"description": "Pug semantic footer"
+	},
+	"Pug Semantic Article": {
+		"prefix": "pugarticle",
+		"body": [
+			"article",
+			"\theader",
+			"\t\th1 ${1:Article Title}",
+			"\tsection",
+			"\t\t${0}"
+		],
+		"description": "Pug semantic article"
+	},
+	"Pug Semantic Section": {
+		"prefix": "pugsection",
+		"body": [
+			"section",
+			"\th2 ${1:Section Title}",
+			"\t${0}"
+		],
+		"description": "Pug semantic section"
+	},
+	"Pug Accessible Form": {
+		"prefix": "pugform",
+		"body": [
+			"form(action=\"${1:#}\" method=\"${2:post}\" novalidate)",
+			"\tfieldset",
+			"\t\tlegend ${3:Form Title}",
+			"\t\tdiv",
+			"\t\t\tlabel(for=\"${4:inputId}\") ${5:Label}",
+			"\t\t\tinput(type=\"${6:text}\" id=\"${4:inputId}\" name=\"${4:inputId}\" required aria-describedby=\"${4:inputId}-error\")",
+			"\t\t\tspan(id=\"${4:inputId}-error\" class=\"error\" role=\"alert\")",
+			"\t\tbutton(type=\"submit\") ${7:Submit}"
+		],
+		"description": "Pug accessible form"
+	},
+	"Pug Accessible Button": {
+		"prefix": "pugbutton",
+		"body": [
+			"button(type=\"${1:button}\" aria-label=\"${2:Button description}\") ${3:Button Text}"
+		],
+		"description": "Pug accessible button"
+	},
+	"Pug Accessible Link": {
+		"prefix": "puglink",
+		"body": [
+			"a(href=\"${1:#}\" aria-label=\"${2:Link description}\") ${3:Link Text}"
+		],
+		"description": "Pug accessible link"
+	},
+	"Pug Accessible Image": {
+		"prefix": "pugimg",
+		"body": [
+			"img(src=\"${1:image.jpg}\" alt=\"${2:Image description}\" loading=\"${3:lazy}\" width=\"${4:800}\" height=\"${5:600}\")"
+		],
+		"description": "Pug accessible image"
+	},
+	"Pug Accessible Table": {
+		"prefix": "pugtable",
+		"body": [
+			"table",
+			"\tcaption ${1:Table caption}",
+			"\tthead",
+			"\t\ttr",
+			"\t\t\tth(scope=\"col\") ${2:Header 1}",
+			"\t\t\tth(scope=\"col\") ${3:Header 2}",
+			"\ttbody",
+			"\t\ttr",
+			"\t\t\tth(scope=\"row\") ${4:Row Header}",
+			"\t\t\ttd ${5:Data}"
+		],
+		"description": "Pug accessible table"
+	},
+	"Pug Card Component": {
+		"prefix": "pugcard",
+		"body": [
+			".card",
+			"\t.card-header",
+			"\t\th3 ${1:Card Title}",
+			"\t.card-body",
+			"\t\tp ${2:Card content}",
+			"\t\tbutton.btn ${3:Action}"
+		],
+		"description": "Pug card component"
+	},
+	"Pug Navigation": {
+		"prefix": "pugnav",
+		"body": [
+			"nav",
+			"\tul",
+			"\t\tli",
+			"\t\t\ta(href=\"${1:#}\") ${2:Home}",
+			"\t\tli",
+			"\t\t\ta(href=\"${3:#}\") ${4:About}",
+			"\t\tli",
+			"\t\t\ta(href=\"${5:#}\") ${6:Contact}"
+		],
+		"description": "Pug navigation menu"
+	},
+	"Pug List": {
+		"prefix": "puglist",
+		"body": [
+			"ul",
+			"\tli ${1:Item 1}",
+			"\tli ${2:Item 2}",
+			"\tli ${3:Item 3}"
+		],
+		"description": "Pug unordered list"
+	},
+	"Pug Ordered List": {
+		"prefix": "pugol",
+		"body": [
+			"ol",
+			"\tli ${1:Item 1}",
+			"\tli ${2:Item 2}",
+			"\tli ${3:Item 3}"
+		],
+		"description": "Pug ordered list"
+	},
+	"Pug Div with Class": {
+		"prefix": "pugdiv",
+		"body": [
+			"div.${1:className}",
+			"\t${0}"
+		],
+		"description": "Pug div with class"
+	},
+	"Pug Div with ID": {
+		"prefix": "pugdiv-id",
+		"body": [
+			"div#${1:idName}",
+			"\t${0}"
+		],
+		"description": "Pug div with ID"
+	},
+	"Pug Input": {
+		"prefix": "puginput",
+		"body": [
+			"input(type=\"${1:text}\" id=\"${2:inputId}\" name=\"${2:inputId}\" placeholder=\"${3:Placeholder}\")"
+		],
+		"description": "Pug input field"
+	},
+	"Pug Textarea": {
+		"prefix": "pugtextarea",
+		"body": [
+			"textarea(id=\"${1:textareaId}\" name=\"${1:textareaId}\" rows=\"${2:4}\" placeholder=\"${3:Placeholder}\")"
+		],
+		"description": "Pug textarea"
+	},
+	"Pug Select": {
+		"prefix": "pugselect",
+		"body": [
+			"select(id=\"${1:selectId}\" name=\"${1:selectId}\")",
+			"\toption(value=\"\") ${2:Choose...}",
+			"\toption(value=\"${3:1}\") ${4:Option 1}",
+			"\toption(value=\"${5:2}\") ${6:Option 2}"
+		],
+		"description": "Pug select dropdown"
+	},
+	"Pug Mixin": {
+		"prefix": "pugmixin",
+		"body": [
+			"mixin ${1:mixinName}(${2:param})",
+			"\t${0}"
+		],
+		"description": "Pug mixin definition"
+	},
+	"Pug Mixin Call": {
+		"prefix": "pugmixin-call",
+		"body": [
+			"+${1:mixinName}(${2:arg})"
+		],
+		"description": "Pug mixin call"
+	},
+	"Pug Include": {
+		"prefix": "puginclude",
+		"body": [
+			"include ${1:path/to/file}"
+		],
+		"description": "Pug include statement"
+	},
+	"Pug Extends": {
+		"prefix": "pugextends",
+		"body": [
+			"extends ${1:layout}",
+			"",
+			"block ${2:content}",
+			"\t${0}"
+		],
+		"description": "Pug extends layout"
+	},
+	"Pug Block": {
+		"prefix": "pugblock",
+		"body": [
+			"block ${1:blockName}",
+			"\t${0}"
+		],
+		"description": "Pug block definition"
+	},
+	"Pug Conditional": {
+		"prefix": "pugif",
+		"body": [
+			"if ${1:condition}",
+			"\t${0}",
+			"else",
+			"\t${2}"
+		],
+		"description": "Pug conditional statement"
+	},
+	"Pug Each Loop": {
+		"prefix": "pugeach",
+		"body": [
+			"each ${1:item} in ${2:items}",
+			"\t${0}"
+		],
+		"description": "Pug each loop"
+	},
+	"Pug While Loop": {
+		"prefix": "pugwhile",
+		"body": [
+			"while ${1:condition}",
+			"\t${0}"
+		],
+		"description": "Pug while loop"
+	},
+	"Pug Case Statement": {
+		"prefix": "pugcase",
+		"body": [
+			"case ${1:value}",
+			"\twhen ${2:'option1'}",
+			"\t\t${3}",
+			"\twhen ${4:'option2'}",
+			"\t\t${5}",
+			"\tdefault",
+			"\t\t${6}"
+		],
+		"description": "Pug case statement"
+	}
 }

@@ -1,70 +1,148 @@
 {
-    "name": "vue-snippets-js-html-pug-razor",
-    "displayName": "Vue Snippets JS/HTML/PUG/Razor/PHP",
-    "description": "",
-    "icon": "images/vue-logo.png",
-    "version": "0.0.3",
-    "publisher": "heberalmeida",
-    "engines": {
-        "vscode": "^1.14.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/heberalmeida/vue-snippets-js-html-pug-razor"
-    },
-    "keywords": [
-        "Vue",
-        "Vue 2",
-        "Vue Snippets"
-    ],
-    "extensionDependencies": [
-        "octref.vetur"
-    ],
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "vue",
-                "path": "./snippets/vue.json"
-            },
-            {
-                "language": "plaintext",
-                "path": "./snippets/plaintext.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/vue.json"
-            },
-            {
-                "language": "pug",
-                "path": "./snippets/pug.json"
-            },
-            {
-                "language": "razor",
-                "path": "./snippets/html.json"
-            },
-            {
-                "language": "php",
-                "path": "./snippets/html.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/html.json"
-            },
-            {
-                "language": "vue",
-                "path": "./snippets/bs3.json"
-            },
-            {
-                "language": "razor",
-                "path": "./snippets/bs3.json"
-            },
-            {
-                "language": "php",
-                "path": "./snippets/bs3.json"
-            }
-        ]
-    }
+	"name": "vue-snippets-js-html-pug-razor",
+	"displayName": "Vue 3 + Tailwind + Bootstrap Snippets",
+	"description": "Complete snippet pack for Vue 3, Tailwind CSS 3/4, Bootstrap 5/6, modern HTML, Pug, and Razor. TypeScript-friendly with Composition API support.",
+	"icon": "images/vue-logo.png",
+	"version": "2.0.0",
+	"publisher": "heberalmeida",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/heberalmeida/vue-snippets-js-html-pug-razor"
+	},
+	"keywords": [
+		"Vue",
+		"Vue 3",
+		"Vue.js",
+		"Composition API",
+		"TypeScript",
+		"Tailwind",
+		"TailwindCSS",
+		"Tailwind CSS 3",
+		"Tailwind CSS 4",
+		"Bootstrap",
+		"Bootstrap 5",
+		"Bootstrap 6",
+		"HTML",
+		"HTML5",
+		"Pug",
+		"Razor",
+		"ASP.NET",
+		"ASP.NET Core",
+		"Snippets",
+		"Vite",
+		"Nuxt",
+		"Nuxt 3",
+		"Pinia",
+		"Vue Router"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "pug",
+				"path": "./snippets/pug.json"
+			},
+			{
+				"language": "razor",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "cshtml",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/tailwind.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/tailwind.json"
+			},
+			{
+				"language": "less",
+				"path": "./snippets/tailwind.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/tailwind.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/tailwind.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/bootstrap.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/bootstrap.json"
+			},
+			{
+				"language": "razor",
+				"path": "./snippets/bootstrap.json"
+			},
+			{
+				"language": "cshtml",
+				"path": "./snippets/bootstrap.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/bs3.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/bs3.json"
+			},
+			{
+				"language": "razor",
+				"path": "./snippets/bs3.json"
+			},
+			{
+				"language": "cshtml",
+				"path": "./snippets/bs3.json"
+			},
+			{
+				"language": "plaintext",
+				"path": "./snippets/plaintext.json"
+			}
+		]
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"license": "MIT"
 }

@@ -1,0 +1,670 @@
+{
+	"TypeScript Interface": {
+		"prefix": "tsinterface",
+		"body": [
+			"interface ${1:InterfaceName} {",
+			"\t${2:property}: ${3:string}",
+			"}"
+		],
+		"description": "TypeScript interface definition"
+	},
+	"TypeScript Interface with Extends": {
+		"prefix": "tsinterface-extends",
+		"body": [
+			"interface ${1:InterfaceName} extends ${2:BaseInterface} {",
+			"\t${3:property}: ${4:string}",
+			"}"
+		],
+		"description": "TypeScript interface extending another interface"
+	},
+	"TypeScript Type Alias": {
+		"prefix": "tstype",
+		"body": [
+			"type ${1:TypeName} = ${2:string}"
+		],
+		"description": "TypeScript type alias"
+	},
+	"TypeScript Union Type": {
+		"prefix": "tsunion",
+		"body": [
+			"type ${1:TypeName} = ${2:string} | ${3:number}"
+		],
+		"description": "TypeScript union type"
+	},
+	"TypeScript Intersection Type": {
+		"prefix": "tsintersection",
+		"body": [
+			"type ${1:TypeName} = ${2:TypeA} & ${3:TypeB}"
+		],
+		"description": "TypeScript intersection type"
+	},
+	"TypeScript Generic Type": {
+		"prefix": "tsgeneric",
+		"body": [
+			"type ${1:TypeName}<${2:T}> = ${3:Array}<${2:T}>"
+		],
+		"description": "TypeScript generic type"
+	},
+	"TypeScript Enum": {
+		"prefix": "tsenum",
+		"body": [
+			"enum ${1:EnumName} {",
+			"\t${2:KEY} = ${3:'value'}",
+			"}"
+		],
+		"description": "TypeScript enum"
+	},
+	"TypeScript Enum Numeric": {
+		"prefix": "tsenum-numeric",
+		"body": [
+			"enum ${1:EnumName} {",
+			"\t${2:KEY} = ${3:0}",
+			"}"
+		],
+		"description": "TypeScript numeric enum"
+	},
+	"TypeScript Const Enum": {
+		"prefix": "tsconst-enum",
+		"body": [
+			"const enum ${1:EnumName} {",
+			"\t${2:KEY} = ${3:'value'}",
+			"}"
+		],
+		"description": "TypeScript const enum"
+	},
+	"TypeScript Class": {
+		"prefix": "tsclass",
+		"body": [
+			"class ${1:ClassName} {",
+			"\tprivate ${2:property}: ${3:string}",
+			"",
+			"\tconstructor(${4:param}: ${5:string}) {",
+			"\t\tthis.${2:property} = ${4:param}",
+			"\t}",
+			"",
+			"\t${6:method}(): ${7:void} {",
+			"\t\t${0}",
+			"\t}",
+			"}"
+		],
+		"description": "TypeScript class"
+	},
+	"TypeScript Class with Extends": {
+		"prefix": "tsclass-extends",
+		"body": [
+			"class ${1:ClassName} extends ${2:BaseClass} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript class extending another class"
+	},
+	"TypeScript Class with Implements": {
+		"prefix": "tsclass-implements",
+		"body": [
+			"class ${1:ClassName} implements ${2:Interface} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript class implementing interface"
+	},
+	"TypeScript Function": {
+		"prefix": "tsfunction",
+		"body": [
+			"function ${1:functionName}(${2:param}: ${3:string}): ${4:void} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript function"
+	},
+	"TypeScript Arrow Function": {
+		"prefix": "tsarrow",
+		"body": [
+			"const ${1:functionName} = (${2:param}: ${3:string}): ${4:void} => {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript arrow function"
+	},
+	"TypeScript Async Function": {
+		"prefix": "tsasync",
+		"body": [
+			"async function ${1:functionName}(${2:param}: ${3:string}): Promise<${4:void}> {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript async function"
+	},
+	"TypeScript Async Arrow Function": {
+		"prefix": "tsasync-arrow",
+		"body": [
+			"const ${1:functionName} = async (${2:param}: ${3:string}): Promise<${4:void}> => {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript async arrow function"
+	},
+	"TypeScript Generic Function": {
+		"prefix": "tsgeneric-function",
+		"body": [
+			"function ${1:functionName}<${2:T}>(${3:param}: ${2:T}): ${2:T} {",
+			"\treturn ${3:param}",
+			"}"
+		],
+		"description": "TypeScript generic function"
+	},
+	"TypeScript Type Guard": {
+		"prefix": "tstypeguard",
+		"body": [
+			"function is${1:Type}(value: ${2:unknown}): value is ${1:Type} {",
+			"\treturn ${3:typeof value === 'string'}",
+			"}"
+		],
+		"description": "TypeScript type guard function"
+	},
+	"TypeScript Utility Type - Partial": {
+		"prefix": "tspartial",
+		"body": [
+			"Partial<${1:Type}>"
+		],
+		"description": "TypeScript Partial utility type"
+	},
+	"TypeScript Utility Type - Required": {
+		"prefix": "tsrequired",
+		"body": [
+			"Required<${1:Type}>"
+		],
+		"description": "TypeScript Required utility type"
+	},
+	"TypeScript Utility Type - Pick": {
+		"prefix": "tspick",
+		"body": [
+			"Pick<${1:Type}, '${2:key}'>"
+		],
+		"description": "TypeScript Pick utility type"
+	},
+	"TypeScript Utility Type - Omit": {
+		"prefix": "tsomit",
+		"body": [
+			"Omit<${1:Type}, '${2:key}'>"
+		],
+		"description": "TypeScript Omit utility type"
+	},
+	"TypeScript Utility Type - Record": {
+		"prefix": "tsrecord",
+		"body": [
+			"Record<${1:string}, ${2:number}>"
+		],
+		"description": "TypeScript Record utility type"
+	},
+	"TypeScript Utility Type - Readonly": {
+		"prefix": "tsreadonly",
+		"body": [
+			"Readonly<${1:Type}>"
+		],
+		"description": "TypeScript Readonly utility type"
+	},
+	"TypeScript Utility Type - Extract": {
+		"prefix": "tsextract",
+		"body": [
+			"Extract<${1:Type}, ${2:Union}>"
+		],
+		"description": "TypeScript Extract utility type"
+	},
+	"TypeScript Utility Type - Exclude": {
+		"prefix": "tsexclude",
+		"body": [
+			"Exclude<${1:Type}, ${2:Union}>"
+		],
+		"description": "TypeScript Exclude utility type"
+	},
+	"TypeScript Utility Type - NonNullable": {
+		"prefix": "tsnonnullable",
+		"body": [
+			"NonNullable<${1:Type}>"
+		],
+		"description": "TypeScript NonNullable utility type"
+	},
+	"TypeScript Utility Type - Parameters": {
+		"prefix": "tsparameters",
+		"body": [
+			"Parameters<typeof ${1:functionName}>"
+		],
+		"description": "TypeScript Parameters utility type"
+	},
+	"TypeScript Utility Type - ReturnType": {
+		"prefix": "tsreturntype",
+		"body": [
+			"ReturnType<typeof ${1:functionName}>"
+		],
+		"description": "TypeScript ReturnType utility type"
+	},
+	"TypeScript Mapped Type": {
+		"prefix": "tsmapped",
+		"body": [
+			"type ${1:TypeName} = {",
+			"\t[K in keyof ${2:SourceType}]: ${2:SourceType}[K]",
+			"}"
+		],
+		"description": "TypeScript mapped type"
+	},
+	"TypeScript Conditional Type": {
+		"prefix": "tsconditional",
+		"body": [
+			"type ${1:TypeName} = ${2:Type} extends ${3:Condition} ? ${4:TrueType} : ${5:FalseType}"
+		],
+		"description": "TypeScript conditional type"
+	},
+	"TypeScript Namespace": {
+		"prefix": "tsnamespace",
+		"body": [
+			"namespace ${1:NamespaceName} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript namespace"
+	},
+	"TypeScript Module Declaration": {
+		"prefix": "tsmodule",
+		"body": [
+			"declare module '${1:module-name}' {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript module declaration"
+	},
+	"TypeScript Type Assertion": {
+		"prefix": "tsassert",
+		"body": [
+			"${1:value} as ${2:Type}"
+		],
+		"description": "TypeScript type assertion"
+	},
+	"TypeScript Type Assertion (Angle Bracket)": {
+		"prefix": "tsassert-angle",
+		"body": [
+			"<${1:Type}>${2:value}"
+		],
+		"description": "TypeScript type assertion with angle brackets"
+	},
+	"TypeScript Optional Property": {
+		"prefix": "tsoptional",
+		"body": [
+			"${1:property}?: ${2:Type}"
+		],
+		"description": "TypeScript optional property"
+	},
+	"TypeScript Readonly Property": {
+		"prefix": "tsreadonly-prop",
+		"body": [
+			"readonly ${1:property}: ${2:Type}"
+		],
+		"description": "TypeScript readonly property"
+	},
+	"TypeScript Index Signature": {
+		"prefix": "tsindex",
+		"body": [
+			"[key: ${1:string}]: ${2:Type}"
+		],
+		"description": "TypeScript index signature"
+	},
+	"TypeScript Tuple": {
+		"prefix": "tstuple",
+		"body": [
+			"type ${1:TupleName} = [${2:string}, ${3:number}]"
+		],
+		"description": "TypeScript tuple type"
+	},
+	"TypeScript Readonly Tuple": {
+		"prefix": "tstuple-readonly",
+		"body": [
+			"type ${1:TupleName} = readonly [${2:string}, ${3:number}]"
+		],
+		"description": "TypeScript readonly tuple"
+	},
+	"TypeScript Array Type": {
+		"prefix": "tsarray",
+		"body": [
+			"${1:Array}<${2:Type}>"
+		],
+		"description": "TypeScript array type"
+	},
+	"TypeScript Array Literal": {
+		"prefix": "tsarray-literal",
+		"body": [
+			"${1:Type}[]"
+		],
+		"description": "TypeScript array literal syntax"
+	},
+	"TypeScript Promise": {
+		"prefix": "tspromise",
+		"body": [
+			"Promise<${1:Type}>"
+		],
+		"description": "TypeScript Promise type"
+	},
+	"TypeScript Try Catch": {
+		"prefix": "tstry",
+		"body": [
+			"try {",
+			"\t${0}",
+			"} catch (error) {",
+			"\tif (error instanceof Error) {",
+			"\t\tconsole.error(error.message)",
+			"\t}",
+			"}"
+		],
+		"description": "TypeScript try-catch block"
+	},
+	"TypeScript Try Catch Finally": {
+		"prefix": "tstry-finally",
+		"body": [
+			"try {",
+			"\t${0}",
+			"} catch (error) {",
+			"\tif (error instanceof Error) {",
+			"\t\tconsole.error(error.message)",
+			"\t}",
+			"} finally {",
+			"\t${1}",
+			"}"
+		],
+		"description": "TypeScript try-catch-finally block"
+	},
+	"TypeScript For Loop": {
+		"prefix": "tsfor",
+		"body": [
+			"for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript for loop"
+	},
+	"TypeScript For Of Loop": {
+		"prefix": "tsforof",
+		"body": [
+			"for (const ${1:item} of ${2:array}) {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript for-of loop"
+	},
+	"TypeScript For In Loop": {
+		"prefix": "tsforin",
+		"body": [
+			"for (const ${1:key} in ${2:object}) {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript for-in loop"
+	},
+	"TypeScript While Loop": {
+		"prefix": "tswhile",
+		"body": [
+			"while (${1:condition}) {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript while loop"
+	},
+	"TypeScript If Statement": {
+		"prefix": "tsif",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript if statement"
+	},
+	"TypeScript If Else": {
+		"prefix": "tsifelse",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2}",
+			"} else {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript if-else statement"
+	},
+	"TypeScript Switch Statement": {
+		"prefix": "tsswitch",
+		"body": [
+			"switch (${1:value}) {",
+			"\tcase ${2:case1}:",
+			"\t\t${3}",
+			"\t\tbreak",
+			"\tcase ${4:case2}:",
+			"\t\t${5}",
+			"\t\tbreak",
+			"\tdefault:",
+			"\t\t${0}",
+			"}"
+		],
+		"description": "TypeScript switch statement"
+	},
+	"TypeScript Export": {
+		"prefix": "tsexport",
+		"body": [
+			"export ${1:const|function|class|interface|type} ${2:name}"
+		],
+		"description": "TypeScript export statement"
+	},
+	"TypeScript Export Default": {
+		"prefix": "tsexport-default",
+		"body": [
+			"export default ${1:name}"
+		],
+		"description": "TypeScript default export"
+	},
+	"TypeScript Import": {
+		"prefix": "tsimport",
+		"body": [
+			"import { ${1:name} } from '${2:module}'"
+		],
+		"description": "TypeScript import statement"
+	},
+	"TypeScript Import Default": {
+		"prefix": "tsimport-default",
+		"body": [
+			"import ${1:name} from '${2:module}'"
+		],
+		"description": "TypeScript default import"
+	},
+	"TypeScript Import All": {
+		"prefix": "tsimport-all",
+		"body": [
+			"import * as ${1:alias} from '${2:module}'"
+		],
+		"description": "TypeScript import all"
+	},
+	"TypeScript Import Type": {
+		"prefix": "tsimport-type",
+		"body": [
+			"import type { ${1:Type} } from '${2:module}'"
+		],
+		"description": "TypeScript type-only import"
+	},
+	"TypeScript Const Declaration": {
+		"prefix": "tsconst",
+		"body": [
+			"const ${1:name}: ${2:Type} = ${3:value}"
+		],
+		"description": "TypeScript const declaration"
+	},
+	"TypeScript Let Declaration": {
+		"prefix": "tslet",
+		"body": [
+			"let ${1:name}: ${2:Type} = ${3:value}"
+		],
+		"description": "TypeScript let declaration"
+	},
+	"TypeScript Var Declaration": {
+		"prefix": "tsvar",
+		"body": [
+			"var ${1:name}: ${2:Type} = ${3:value}"
+		],
+		"description": "TypeScript var declaration"
+	},
+	"TypeScript Null Check": {
+		"prefix": "tsnullcheck",
+		"body": [
+			"if (${1:value} !== null && ${1:value} !== undefined) {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript null check"
+	},
+	"TypeScript Optional Chaining": {
+		"prefix": "tsoptional-chain",
+		"body": [
+			"${1:object}?.${2:property}"
+		],
+		"description": "TypeScript optional chaining"
+	},
+	"TypeScript Nullish Coalescing": {
+		"prefix": "tsnullish",
+		"body": [
+			"${1:value} ?? ${2:defaultValue}"
+		],
+		"description": "TypeScript nullish coalescing"
+	},
+	"TypeScript Template Literal Type": {
+		"prefix": "tstemplate-literal",
+		"body": [
+			"type ${1:TypeName} = \`${2:prefix}-\${${3:Union}}\`"
+		],
+		"description": "TypeScript template literal type"
+	},
+	"TypeScript Keyof": {
+		"prefix": "tskeyof",
+		"body": [
+			"keyof ${1:Type}"
+		],
+		"description": "TypeScript keyof operator"
+	},
+	"TypeScript Typeof": {
+		"prefix": "tstypeof",
+		"body": [
+			"typeof ${1:value}"
+		],
+		"description": "TypeScript typeof operator"
+	},
+	"TypeScript Instanceof": {
+		"prefix": "tsinstanceof",
+		"body": [
+			"${1:value} instanceof ${2:Class}"
+		],
+		"description": "TypeScript instanceof operator"
+	},
+	"TypeScript In Operator": {
+		"prefix": "tsin",
+		"body": [
+			"'${1:key}' in ${2:object}"
+		],
+		"description": "TypeScript in operator"
+	},
+	"TypeScript Satisfies": {
+		"prefix": "tssatisfies",
+		"body": [
+			"${1:value} satisfies ${2:Type}"
+		],
+		"description": "TypeScript satisfies operator"
+	},
+	"TypeScript Assertion Function": {
+		"prefix": "tsassertion-fn",
+		"body": [
+			"function assert${1:Type}(value: ${2:unknown}): asserts value is ${1:Type} {",
+			"\tif (!${3:condition}) {",
+			"\t\tthrow new Error('${4:Error message}')",
+			"\t}",
+			"}"
+		],
+		"description": "TypeScript assertion function"
+	},
+	"TypeScript Decorator": {
+		"prefix": "tsdecorator",
+		"body": [
+			"@${1:decorator}(${2:args})",
+			"${3:class|method|property}"
+		],
+		"description": "TypeScript decorator"
+	},
+	"TypeScript Abstract Class": {
+		"prefix": "tsabstract",
+		"body": [
+			"abstract class ${1:ClassName} {",
+			"\tabstract ${2:method}(): ${3:void}",
+			"}"
+		],
+		"description": "TypeScript abstract class"
+	},
+	"TypeScript Getter": {
+		"prefix": "tsgetter",
+		"body": [
+			"get ${1:property}(): ${2:Type} {",
+			"\treturn this.${3:privateProperty}",
+			"}"
+		],
+		"description": "TypeScript getter"
+	},
+	"TypeScript Setter": {
+		"prefix": "tssetter",
+		"body": [
+			"set ${1:property}(value: ${2:Type}) {",
+			"\tthis.${3:privateProperty} = value",
+			"}"
+		],
+		"description": "TypeScript setter"
+	},
+	"TypeScript Static Method": {
+		"prefix": "tsstatic",
+		"body": [
+			"static ${1:method}(): ${2:Type} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript static method"
+	},
+	"TypeScript Private Method": {
+		"prefix": "tsprivate",
+		"body": [
+			"private ${1:method}(): ${2:Type} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript private method"
+	},
+	"TypeScript Protected Method": {
+		"prefix": "tsprotected",
+		"body": [
+			"protected ${1:method}(): ${2:Type} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript protected method"
+	},
+	"TypeScript Public Method": {
+		"prefix": "tspublic",
+		"body": [
+			"public ${1:method}(): ${2:Type} {",
+			"\t${0}",
+			"}"
+		],
+		"description": "TypeScript public method"
+	},
+	"TypeScript Readonly Modifier": {
+		"prefix": "tsreadonly-mod",
+		"body": [
+			"readonly ${1:property}: ${2:Type}"
+		],
+		"description": "TypeScript readonly modifier"
+	},
+	"TypeScript Accessor Modifiers": {
+		"prefix": "tsaccessor",
+		"body": [
+			"${1:public|private|protected} ${2:property}: ${3:Type}"
+		],
+		"description": "TypeScript accessor modifiers"
+	}
+}
+

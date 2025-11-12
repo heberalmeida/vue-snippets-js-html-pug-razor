@@ -1,411 +1,446 @@
 {
-    "Vue Single File Component": {
-        "prefix": "vbase",
-        "body": [
-            "<template>",
-            "\t<div>",
-            "",
-            "\t</div>",
-            "</template>",
-            "",
-            "<script>",
-            "\texport default {",
-            "\t\t${0}",
-            "\t}",
-            "</script>",
-            "",
-            "<style scoped>",
-            "",
-            "</style>"
-        ],
-        "description": "Base for Vue File"
-    },
-    "Vue Single File Component Pug": {
-        "prefix": "vbasep",
-        "body": [
-            "<template lang=\"pug\">",
-            "\tdiv",
-            "</template>",
-            "",
-            "<script>",
-            "\texport default {",
-            "\t\t${0}",
-            "\t}",
-            "</script>",
-            "",
-            "<style lang=\"stylus\" scoped>",
-            "",
-            "</style>"
-        ],
-        "description": "Base for Vue File Pug"
-    },
-    "Vue Data": {
-        "prefix": "vdata",
-        "body": [
-            "data() {",
-            "\treturn {",
-            "\t\t${1:key}: ${2:value}",
-            "\t}",
-            "},"
-        ],
-        "description": "Vue Component Data"
-    },
-    "Vuex Store": {
-        "prefix": "vstore",
-        "body": [
-            "import Vue from 'vue';",
-            "import Vuex from 'vuex';",
-            "",
-            "Vue.use(Vuex);",
-            "",
-            "export const store = new Vuex.Store({",
-            "\tstate: {",
-            "\t\t${1:key}: ${2:value}",
-            "\t}",
-            "});"
-        ],
-        "description": "Base for Vuex store"
-    },
-    "Vue Props with Default": {
-        "prefix": "vprops",
-        "body": [
-            "props: {",
-            "\t${1:propName}: {",
-            "\t\ttype: ${2:number},",
-            "\t\tdefault: ${0}",
-            "\t},",
-            "},"
-        ],
-        "description": "Vue Props with Default"
-    },
-    "Vue Import File": {
-        "prefix": "vimport",
-        "body": [
-            "import ${1:New} from './components/${1:New}.vue';"
-        ],
-        "description": "Import one component into another"
-    },
-    "Vue Import into the Component": {
-        "prefix": "vimport-c",
-        "body": [
-            "components: {",
-            "\t${1:New},",
-            "}"
-        ],
-        "description": "Import one component into another, within export statement"
-    },
-    "Vue Import Export": {
-        "prefix": "vimport-export",
-        "body": [
-            "import ${1:Name} from '~components/${1:Name}.vue'",
-            "",
-            "export default {",
-            "\tcomponents: {",
-            "\t\t${1:Name}",
-            "\t},",
-            "}"
-        ],
-        "description": "import a component and include it in export default"
-    },
-    "Vue v-for": {
-        "prefix": "vfor",
-        "body": [
-            "<${1:div} v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\">",
-            "\t{{ ${2:item} }}",
-            "</${1:div}>"
-        ],
-        "description": "vfor statement"
-    },
-    "Vue Transition Methods with JavaScript Hooks": {
-        "prefix": "vanimhook-js",
-        "body": [
-            "methods: {",
-            "\tbeforeEnter(el) {",
-            "\t\tconsole.log('beforeEnter');",
-            "\t},",
-            "\tenter(el, done) {",
-            "\t\tconsole.log('enter');",
-            "\t\tdone();",
-            "\t},",
-            "\tbeforeLeave(el) {",
-            "\t\tconsole.log('beforeLeave');",
-            "\t},",
-            "\tleave(el, done) {",
-            "\t\tconsole.log('leave');",
-            "\t\tdone();",
-            "\t},",
-            "},"
-        ],
-        "description": "transition component js hooks"
-    },
-    "Vuex Getters": {
-        "prefix": "vgetter",
-        "body": [
-            "getters: {",
-            "\tvalue: ${1:value} => {",
-            "\t\treturn state.${1:value};",
-            "\t}",
-            "}"
-        ],
-        "description": "vuex getter"
-    },
-    "Vuex Mutation": {
-        "prefix": "vmutation",
-        "body": [
-            "mutations: {",
-            "\t${1:updateValue}(state, ${3:payload}) {",
-            "\t\tstate.${2:value} = ${3:payload};",
-            "\t}",
-            "}"
-        ],
-        "description": "vuex mutation"
-    },
-    "Vuex Action": {
-        "prefix": "vaction",
-        "body": [
-            "actions: {",
-            "\t${1:updateValue}({commit}, ${2:payload}) {",
-            "\t\tcommit(${1:updateValue}, ${2:payload});",
-            "\t}",
-            "}"
-        ],
-        "description": "vuex action"
-    },
-    "Vue Filter": {
-        "prefix": "vfilter",
-        "body": [
-            "filters: {",
-            "\t${1:fnName}: function(${2:value}) {",
-            "\t\treturn ${2:value}${0};",
-            "\t}",
-            "}"
-        ],
-        "description": "vue filter"
-    },
-    "Vue Mixin": {
-        "prefix": "vmixin",
-        "body": [
-            "const ${1:mixinName} = {",
-            "\tmounted() {",
-            "\t\tconsole.log('hello from mixin!')",
-            "\t},",
-            "}"
-        ],
-        "description": "vue mixin"
-    },
-    "Vue Use Mixin": {
-        "prefix": "vmixin-use",
-        "body": [
-            "mixins: [${1:mixinName}]"
-        ],
-        "description": "vue use mixin"
-    },
-    "Vue Custom Directive": {
-        "prefix": "vc-direct",
-        "body": [
-            "Vue.directive('${1:directiveName}', {",
-            "\tbind(el, binding, vnode) {",
-            "\t\tel.style.${2:arg} = binding.value.${2:arg};",
-            "\t}",
-            "});"
-        ],
-        "description": "vue custom directive"
-    },
-    "Vue Methods": {
-        "prefix": "vmethod",
-        "body": [
-            "methods: {",
-            "\t${1:name}() {",
-            "\t\t${0}",
-            "\t}",
-            "},"
-        ],
-        "description": "vue method"
-    },
-    "Vue Computed": {
-        "prefix": "vcomputed",
-        "body": [
-            "computed: {",
-            "\t${1:name}() {",
-            "\t\treturn this.${2:data} ${0}",
-            "\t}",
-            "},"
-        ],
-        "description": "computed value"
-    },
-    "Vue Watchers": {
-        "prefix": "vwatcher",
-        "body": [
-            "watch: {",
-            "\t${1:data}(${2:newValue}, ${3:oldValue}) {",
-            "\t\t${0}",
-            "\t}",
-            "},"
-        ],
-        "description": "vue watcher"
-    },
-    "Vue Import Vuex Store": {
-        "prefix": "vstore-import",
-        "body": [
-            "import { store } from './store/store';"
-        ],
-        "description": "import vuex store into main.js"
-    },
-    "Vue Import Library": {
-        "prefix": "vimport-lib",
-        "body": [
-            "import { ${1:libName} } from '${1:libName}'"
-        ],
-        "description": "import a library"
-    },
-    "Vue Import GSAP": {
-        "prefix": "vimport-gsap",
-        "body": [
-            "import { TimelineMax, ${1:Ease} } from 'gsap'"
-        ],
-        "description": "component methods options that dispatch an action from vuex store."
-    },
-    "Vue v-model Directive": {
-        "prefix": "vmodel",
-        "body": [
-            "<input v-model=\"${1:data}\" type=\"text\" />"
-        ],
-        "description": "v-model directive"
-    },
-    "Vue v-model Number Directive": {
-        "prefix": "vmodel-num",
-        "body": [
-            "<input v-model.number=\"${1:numData}\" type=\"number\" step=\"1\" />"
-        ],
-        "description": "v-model directive number input"
-    },
-    "Vue v-on Shortcut Directive": {
-        "prefix": "von",
-        "body": [
-            "@click=\"${1:handler}(${2:arg}, $event)\""
-        ],
-        "description": "v-on click handler with arguments"
-    },
-    "Vue Component with Props Binding": {
-        "prefix": "vel-props",
-        "body": [
-            "<${1:component} :${1:propName}=\"${0}\"></${1:component}>"
-        ],
-        "description": "component element with props"
-    },
-    "Vue Image Source Binding": {
-        "prefix": "vsrc",
-        "body": [
-            "<img :src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\"/>"
-        ],
-        "description": "image source binding"
-    },
-    "Vue Style Binding": {
-        "prefix": "vstyle",
-        "body": [
-            "<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>"
-        ],
-        "description": "vue inline style binding"
-    },
-    "Vue Style Binding Object": {
-        "prefix": "vstyle-obj",
-        "body": [
-            "<${1:div} :style=\"[${2:styleObjectA}, ${3:styleObjectB]}\"></${1:div}>"
-        ],
-        "description": "vue inline style binding, objects"
-    },
-    "Vue Class Binding": {
-        "prefix": "vclass",
-        "body": [
-            "<${1:div} :class=\"{ ${2:className}: ${3:data} }\"></${1:div}>"
-        ],
-        "description": "vue class binding"
-    },
-    "Vue Class Binding Object": {
-        "prefix": "vclass-obj",
-        "body": [
-            "<${1:div} :class=\"[${2:classNameA}, ${3:classNameB}]\"></${1:div}>"
-        ],
-        "description": "vue class binding"
-    },
-    "Vue Multiple Conditional Class Bindings": {
-        "prefix": "vclass-obj-mult",
-        "body": [
-            "<${1:div} :class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\"></${1:div}>"
-        ],
-        "description": "vue multiple conditional class bindings"
-    },
-    "Vue Transition Component with JavaScript Hooks": {
-        "prefix": "vanim",
-        "body": [
-            "<transition",
-            "\tmode=\"out-in\"",
-            "\t@before-enter=\"beforeEnter\"",
-            "\t@enter=\"enter\"",
-            "",
-            "\t@before-leave=\"beforeLeave\"",
-            "\t@leave=\"leave\"",
-            "\t:css=\"false\">",
-            "",
-            "</transition>"
-        ],
-        "description": "transition component js hooks"
-    },
-    "Incrementer": {
-        "prefix": "vinc",
-        "body": [
-            "return ${1:this.num} += ${2:1}"
-        ],
-        "description": "increment"
-    },
-    "Decrementer": {
-        "prefix": "vdec",
-        "body": [
-            "return ${1:this.num} -= ${2:1}"
-        ],
-        "description": "decrement"
-    },
-    "vue": {
-        "prefix": "nvue",
-        "body": [
-            "new Vue({",
-            "\tel: '#app',",
-            "\tdata: {",
-            "\t\t${1:key}: ${2:value}",
-            "\t},",
-            "\tmounted() {",
-            "\t\t",
-            "\t}",
-            "})"
-        ],
-        "description": "new Vue()"
-    },
-    "req": {
-        "prefix": "vpoly",
-        "body": [
-            "import req from 'polyasync'"
-        ],
-        "description": "Import Polyasync"
-    },
-    "loader": {
-        "prefix": "vloader",
-        "body": [
-            "import Loader from 'web/Loader/cpn'"
-        ],
-        "description": "Import Loader"
-    },
-    "alert": {
-        "prefix": "valert",
-        "body": [
-            "import AlertResponse from 'web/AlertResponse/cpn'"
-        ],
-        "description": "Import AlertResponse"
-    },
-    "confirm": {
-        "prefix": "vconfirm",
-        "body": [
-            "import ConfirmResponse from 'web/ConfirmResponse/cpn'"
-        ],
-        "description": "Import ConfirmResponse"
-    }
+	"Vue 3 Single File Component (Composition API)": {
+		"prefix": "vbase",
+		"body": [
+			"<template>",
+			"\t<div>",
+			"\t\t${0}",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script setup lang=\"ts\">",
+			"// Component logic here",
+			"</script>",
+			"",
+			"<style scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Vue 3 Single File Component with Composition API (TypeScript)"
+	},
+	"Vue 3 Single File Component (Composition API - JavaScript)": {
+		"prefix": "vbasejs",
+		"body": [
+			"<template>",
+			"\t<div>",
+			"\t\t${0}",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script setup>",
+			"// Component logic here",
+			"</script>",
+			"",
+			"<style scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Vue 3 Single File Component with Composition API (JavaScript)"
+	},
+	"Vue 3 Single File Component Pug": {
+		"prefix": "vbasep",
+		"body": [
+			"<template lang=\"pug\">",
+			"div",
+			"\t${0}",
+			"</template>",
+			"",
+			"<script setup lang=\"ts\">",
+			"// Component logic here",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Vue 3 Single File Component with Pug template"
+	},
+	"Vue 3 ref (reactive reference)": {
+		"prefix": "vref",
+		"body": [
+			"const ${1:name} = ref<${2:string}>(${3:''})"
+		],
+		"description": "Vue 3 ref - reactive reference with TypeScript"
+	},
+	"Vue 3 ref (JavaScript)": {
+		"prefix": "vrefjs",
+		"body": [
+			"const ${1:name} = ref(${2:''})"
+		],
+		"description": "Vue 3 ref - reactive reference (JavaScript)"
+	},
+	"Vue 3 computed": {
+		"prefix": "vcomputed",
+		"body": [
+			"const ${1:computedName} = computed(() => {",
+			"\treturn ${2:value}",
+			"})"
+		],
+		"description": "Vue 3 computed property"
+	},
+	"Vue 3 computed (TypeScript)": {
+		"prefix": "vcomputedts",
+		"body": [
+			"const ${1:computedName} = computed<${2:string}>(() => {",
+			"\treturn ${3:value}",
+			"})"
+		],
+		"description": "Vue 3 computed property with TypeScript"
+	},
+	"Vue 3 watch": {
+		"prefix": "vwatch",
+		"body": [
+			"watch(${1:source}, (${2:newValue}, ${3:oldValue}) => {",
+			"\t${0}",
+			"})"
+		],
+		"description": "Vue 3 watch"
+	},
+	"Vue 3 watch with options": {
+		"prefix": "vwatchopt",
+		"body": [
+			"watch(${1:source}, (${2:newValue}, ${3:oldValue}) => {",
+			"\t${0}",
+			"}, {",
+			"\timmediate: ${4:true},",
+			"\tdeep: ${5:true}",
+			"})"
+		],
+		"description": "Vue 3 watch with options"
+	},
+	"Vue 3 watchEffect": {
+		"prefix": "vwatcheffect",
+		"body": [
+			"watchEffect(() => {",
+			"\t${0}",
+			"})"
+		],
+		"description": "Vue 3 watchEffect"
+	},
+	"Vue 3 props (defineProps)": {
+		"prefix": "vprops",
+		"body": [
+			"const props = defineProps<{",
+			"\t${1:propName}: ${2:string}",
+			"\t${3:propName2}?: ${4:number}",
+			"}>()"
+		],
+		"description": "Vue 3 props with TypeScript"
+	},
+	"Vue 3 props with defaults": {
+		"prefix": "vpropsdef",
+		"body": [
+			"const props = withDefaults(defineProps<{",
+			"\t${1:propName}: ${2:string}",
+			"}>(), {",
+			"\t${1:propName}: ${3:''}",
+			"})"
+		],
+		"description": "Vue 3 props with defaults"
+	},
+	"Vue 3 emits (defineEmits)": {
+		"prefix": "vemits",
+		"body": [
+			"const emit = defineEmits<{",
+			"\t${1:eventName}: [${2:payload}: ${3:string}]",
+			"}>()"
+		],
+		"description": "Vue 3 emits with TypeScript"
+	},
+	"Vue 3 emits (JavaScript)": {
+		"prefix": "vemitsjs",
+		"body": [
+			"const emit = defineEmits(['${1:eventName}'])"
+		],
+		"description": "Vue 3 emits (JavaScript)"
+	},
+	"Vue 3 onMounted": {
+		"prefix": "vonmounted",
+		"body": [
+			"onMounted(() => {",
+			"\t${0}",
+			"})"
+		],
+		"description": "Vue 3 onMounted lifecycle hook"
+	},
+	"Vue 3 onUnmounted": {
+		"prefix": "vonunmounted",
+		"body": [
+			"onUnmounted(() => {",
+			"\t${0}",
+			"})"
+		],
+		"description": "Vue 3 onUnmounted lifecycle hook"
+	},
+	"Vue 3 onUpdated": {
+		"prefix": "vonupdated",
+		"body": [
+			"onUpdated(() => {",
+			"\t${0}",
+			"})"
+		],
+		"description": "Vue 3 onUpdated lifecycle hook"
+	},
+	"Vue 3 reactive": {
+		"prefix": "vreactive",
+		"body": [
+			"const ${1:state} = reactive<{",
+			"\t${2:key}: ${3:string}",
+			"}>({",
+			"\t${2:key}: ${4:''}",
+			"})"
+		],
+		"description": "Vue 3 reactive object"
+	},
+	"Vue 3 provide/inject": {
+		"prefix": "vprovide",
+		"body": [
+			"provide('${1:key}', ${2:value})"
+		],
+		"description": "Vue 3 provide"
+	},
+	"Vue 3 inject": {
+		"prefix": "vinject",
+		"body": [
+			"const ${1:injected} = inject<${2:string}>('${3:key}')"
+		],
+		"description": "Vue 3 inject"
+	},
+	"Vue 3 nextTick": {
+		"prefix": "vnexttick",
+		"body": [
+			"await nextTick()",
+			"${0}"
+		],
+		"description": "Vue 3 nextTick"
+	},
+	"Vue 3 template ref": {
+		"prefix": "vtemplateref",
+		"body": [
+			"const ${1:refName} = ref<${2:HTMLElement | null}>(null)"
+		],
+		"description": "Vue 3 template ref with TypeScript"
+	},
+	"Vue 3 v-for": {
+		"prefix": "vfor",
+		"body": [
+			"<${1:div} v-for=\"${2:item} in ${3:items}\" :key=\"${2:item}.${4:id}\">",
+			"\t{{ ${2:item} }}",
+			"</${1:div}>"
+		],
+		"description": "Vue v-for directive"
+	},
+	"Vue 3 v-for with index": {
+		"prefix": "vforidx",
+		"body": [
+			"<${1:div} v-for=\"(${2:item}, ${3:index}) in ${4:items}\" :key=\"${3:index}\">",
+			"\t{{ ${2:item} }}",
+			"</${1:div}>"
+		],
+		"description": "Vue v-for with index"
+	},
+	"Vue 3 v-model": {
+		"prefix": "vmodel",
+		"body": [
+			"<input v-model=\"${1:modelValue}\" type=\"text\" />"
+		],
+		"description": "Vue v-model directive"
+	},
+	"Vue 3 v-model number": {
+		"prefix": "vmodelnum",
+		"body": [
+			"<input v-model.number=\"${1:numData}\" type=\"number\" />"
+		],
+		"description": "Vue v-model.number directive"
+	},
+	"Vue 3 v-if": {
+		"prefix": "vif",
+		"body": [
+			"<div v-if=\"${1:condition}\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Vue v-if directive"
+	},
+	"Vue 3 v-show": {
+		"prefix": "vshow",
+		"body": [
+			"<div v-show=\"${1:condition}\">",
+			"\t${0}",
+			"</div>"
+		],
+		"description": "Vue v-show directive"
+	},
+	"Vue 3 @click": {
+		"prefix": "vclick",
+		"body": [
+			"@click=\"${1:handler}(${2:arg})\""
+		],
+		"description": "Vue @click handler"
+	},
+	"Vue 3 @submit": {
+		"prefix": "vsubmit",
+		"body": [
+			"@submit.prevent=\"${1:handler}\""
+		],
+		"description": "Vue @submit.prevent handler"
+	},
+	"Vue 3 Router Link": {
+		"prefix": "vrouterlink",
+		"body": [
+			"<RouterLink to=\"${1:/path}\">${2:Link Text}</RouterLink>"
+		],
+		"description": "Vue Router link"
+	},
+	"Vue 3 Router View": {
+		"prefix": "vrouterview",
+		"body": [
+			"<RouterView />"
+		],
+		"description": "Vue Router view"
+	},
+	"Vue 3 useRouter": {
+		"prefix": "vuserouter",
+		"body": [
+			"const router = useRouter()"
+		],
+		"description": "Vue Router useRouter composable"
+	},
+	"Vue 3 useRoute": {
+		"prefix": "vuseroute",
+		"body": [
+			"const route = useRoute()"
+		],
+		"description": "Vue Router useRoute composable"
+	},
+	"Vue 3 Transition": {
+		"prefix": "vtransition",
+		"body": [
+			"<Transition name=\"${1:fade}\">",
+			"\t<${2:div} v-if=\"${3:show}\">",
+			"\t\t${0}",
+			"\t</${2:div}>",
+			"</Transition>"
+		],
+		"description": "Vue 3 Transition component"
+	},
+	"Vue 3 Teleport": {
+		"prefix": "vteleport",
+		"body": [
+			"<Teleport to=\"${1:body}\">",
+			"\t${0}",
+			"</Teleport>"
+		],
+		"description": "Vue 3 Teleport component"
+	},
+	"Vue 3 Suspense": {
+		"prefix": "vsuspense",
+		"body": [
+			"<Suspense>",
+			"\t<template #default>",
+			"\t\t${0}",
+			"\t</template>",
+			"\t<template #fallback>",
+			"\t\t<div>Loading...</div>",
+			"\t</template>",
+			"</Suspense>"
+		],
+		"description": "Vue 3 Suspense component"
+	},
+	"Vue 3 defineAsyncComponent": {
+		"prefix": "vasynccomp",
+		"body": [
+			"const ${1:AsyncComponent} = defineAsyncComponent(() => import('./components/${1:AsyncComponent}.vue'))"
+		],
+		"description": "Vue 3 defineAsyncComponent"
+	},
+	"Vue 3 Options API (Legacy)": {
+		"prefix": "vbase-options",
+		"body": [
+			"<template>",
+			"\t<div>",
+			"\t\t${0}",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"\tname: '${1:ComponentName}',",
+			"\t${2}",
+			"}",
+			"</script>",
+			"",
+			"<style scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Vue 3 Options API component (legacy support)"
+	},
+	"Vue 3 Pinia Store": {
+		"prefix": "vpinia",
+		"body": [
+			"import { defineStore } from 'pinia'",
+			"",
+			"export const use${1:StoreName}Store = defineStore('${2:storeId}', {",
+			"\tstate: () => ({",
+			"\t\t${3:key}: ${4:value}",
+			"\t}),",
+			"\tgetters: {",
+			"\t\t${5:getterName}: (state) => state.${3:key}",
+			"\t},",
+			"\tactions: {",
+			"\t\t${6:actionName}() {",
+			"\t\t\t${0}",
+			"\t\t}",
+			"\t}",
+			"})"
+		],
+		"description": "Vue 3 Pinia store"
+	},
+	"Vue 3 Pinia Store (Composition API)": {
+		"prefix": "vpinia-comp",
+		"body": [
+			"import { defineStore } from 'pinia'",
+			"import { ref, computed } from 'vue'",
+			"",
+			"export const use${1:StoreName}Store = defineStore('${2:storeId}', () => {",
+			"\tconst ${3:state} = ref(${4:value})",
+			"\t",
+			"\tconst ${5:getter} = computed(() => ${3:state}.value)",
+			"\t",
+			"\tfunction ${6:action}() {",
+			"\t\t${0}",
+			"\t}",
+			"\t",
+			"\treturn { ${3:state}, ${5:getter}, ${6:action} }",
+			"})"
+		],
+		"description": "Vue 3 Pinia store with Composition API"
+	},
+	"Vue 3 Nuxt 3 useFetch": {
+		"prefix": "vnuxfetch",
+		"body": [
+			"const { data, pending, error, refresh } = await useFetch('${1:/api/endpoint}')"
+		],
+		"description": "Nuxt 3 useFetch composable"
+	},
+	"Vue 3 Nuxt 3 useAsyncData": {
+		"prefix": "vnuxasync",
+		"body": [
+			"const { data, pending, error, refresh } = await useAsyncData('${1:key}', () => ${2:$fetch('${3:/api/endpoint}')})"
+		],
+		"description": "Nuxt 3 useAsyncData composable"
+	},
+	"Vue 3 Nuxt 3 useHead": {
+		"prefix": "vnuxhead",
+		"body": [
+			"useHead({",
+			"\ttitle: '${1:Page Title}',",
+			"\tmeta: [",
+			"\t\t{ name: 'description', content: '${2:Page description}' }",
+			"\t]",
+			"})"
+		],
+		"description": "Nuxt 3 useHead composable"
+	}
 }
